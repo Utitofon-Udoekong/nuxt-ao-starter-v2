@@ -129,6 +129,13 @@
 <script setup lang="ts">
 import { AOClient } from '~/lib/aoconnect';
 
+useHead({
+  title: 'TaskMaster - AO Task Management',
+  meta: [
+    { name: 'description', content: 'Decentralized task management powered by AO and Arweave' },
+  ],
+});
+
 const wallet = ref<string | null>(null);
 const aoClient = ref<AOClient | null>(null);
 const processId = ref('');
@@ -174,6 +181,6 @@ watch([wallet, processId], () => {
 
 <style>
 body {
-  background-color: #1a202c;
+  background-color: #101828;
 }
 </style>
